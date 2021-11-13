@@ -6,7 +6,7 @@ const message_2=document.querySelector('#msg2')
 
 form_data.addEventListener('submit',(e)=>
 { e.preventDefault();
-  fetch('http://localhost:3000/weather?address='+input_data.value).then((response)=>
+  fetch('/weather?address='+input_data.value).then((response)=>
     {
     response.json().then((data)=>
             
