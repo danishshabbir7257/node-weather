@@ -5,6 +5,7 @@ const geocode=require('./utils/geocode')
 const weatherstack=require('./utils/weatherstack')
 const publicdirectory=path.join(__dirname, '../public')
 const app=express()
+const port=process.env.PORT || 3000
 const viewpath=path.join(__dirname, '../templates/views')
 const partials=path.join(__dirname, '../templates/partials')
 app.use(express.static(publicdirectory))
@@ -55,6 +56,6 @@ app.get('*',(req,res)=>{
 })
 
 
-app.listen(3000,()=>{
-    console.log('listening at port 3000')
+app.listen(port,()=>{
+    console.log('listening at port ' + port)
 })
